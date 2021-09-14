@@ -1,4 +1,5 @@
-const contact = document.querySelector('.projectContainer')
+const project1 = document.getElementById("projectId1")
+const contact = document.querySelector('#projectId1')
 
 const options = {
     //root:,
@@ -6,25 +7,18 @@ const options = {
     threshold: 1
   }
 
-let observer = new IntersectionObserver(x, options);
+let observer = new IntersectionObserver(projectObserve1, options);
 
-
-function x(entries, observer) {
-
-  console.log("asd")
+function projectObserve1(entries,options){
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0.9) {
+      entry.target.classList.add('in-viewport');
+      project1.className = "project1"
+    } else {
+      entry.target.classList.remove('in-viewport');
+     
+    }
+  });
 }
-
 observer.observe(contact);
-/*
-const $video = document.querySelector('.contact')
-    const options = {
-      // root: document.querySelector('body'),
-      rootMargin: '0px 0px 0px 0px',
-      threshold: .5,
-    }
 
-    function callback(entries, observer) {
-     alert("observed")
-    }
-    const observer = new IntersectionObserver(callback, options)
-    observer.observe($video)*/

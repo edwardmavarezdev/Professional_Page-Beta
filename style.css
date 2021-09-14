@@ -8,9 +8,11 @@ body{
     position:relative;
 }
 
-.head{
+/*navigation bar*/
+
+.bar{
     position: fixed;
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(230,230,230);
     width: 100%;
     height: 65px;
     z-index: 1;
@@ -18,8 +20,86 @@ body{
     top:0px;
 }
 
+
+.name{
+    margin-left:5%;
+    font-size: 250%;
+    width:300px;
+    float:left;
+    margin-top: 0.7%;
+    color:rgb(54, 1, 83);
+}
+
+ul{
+    list-style-type:none;
+    display:flex;
+    flex-direction: row;
+    margin-right: 0%;
+    margin-left: 59%;
+}
+
+a{
+    font-size:150%;
+    margin: 0.5% 10% 0 0;
+    color: rgb(54, 1, 83);
+    text-decoration: none;
+    border-bottom: transparent solid 0px;
+    transition: 500ms;
+    
+}
+
+a:hover{
+    border-bottom: rgb(54, 1, 83) solid 2px;
+    transition: 500ms;
+}
+
+a:active{
+    color: rgb(0, 110, 255);
+    transition: 100ms;
+}
+
+/*first content*/
+
+
+.square{
+    position:absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+}
+
+.square h1,.square h2, .square p{
+    text-align: justify;
+    width: 370px;
+    margin: 180px 10% -179px 40%;
+    font-size: 150%;
+    animation-name: appear-text;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.shine{color:rgb(54, 1, 83)}
+
+.square h1{font-size: 2em;}
+
+.square h2{font-size: 3.5em;}
+
+.square p{font-size: 2.5em;}
+
+@keyframes appear-text{
+    from{opacity: 0;
+        margin: 0;
+    
+    }
+    to{opacity: 1;
+        margin: 180px 10% -179px 40%;
+    }
+}
+
 .picture{
-    background-color: blueviolet;
+    background-color: rgb(102, 31, 168);
     width: 70%;
     height: 100%;
     float: right;
@@ -30,7 +110,7 @@ body{
     margin-top: 140px;
     width: 40%;
     border-radius: 100%;
-    border: solid blue 2px;
+    border: solid white 3px;
     opacity:  1;
     animation-name: appear;
     animation-duration: 1.0s;
@@ -49,10 +129,11 @@ body{
         }
 }
 
+/*projects content*/
 
 .projectPlace{
     margin-top: 100%px;
-    background-color: brown;
+    background-color: rgb(102, 31, 168);
     width: 100%;
     display: flex;
     flex-direction:column;
@@ -64,59 +145,169 @@ body{
     position:relative;
 }
 
-.project{
+/*project 1*/
+
+#projectId1{
     width:100%;
     margin:1%;
     display: flex;
     margin-top: 10%;
     border-radius: 20px;
+    opacity: 0;}
+
+/*project animation*/
+
+.project1{
+    width:100%;
+    margin:1%;
+    display: flex;
+    margin-top: 10%;
+    border-radius: 20px;
+    opacity: 0;
     animation-name: projectEnter;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
 
 @keyframes projectEnter{
     from{opacity: 0;
-        margin-left:-50%;}
+        margin-left:-30%;}
     to{opacity: 1;
         margin-left:1%;}
 }
 
-.project:hover ~ .over{
-    animation-name:on;
+/*project 1 hover number*/
+
+.projectN1{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    display: table-cell;
+    font-size: 500%;
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    animation-name:reverseNumber1;
+    animation-duration: 0.5s;
+}
+
+.project1:hover ~ .projectN1{
+    animation-name:showNumber1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-@keyframes on{
+@keyframes showNumber1{
     from{opacity: 0;
-        margin-top: 0;       
+        margin-top: -100px;       
     }
-    to{opacity: 1;
+    to{opacity: 0.7;
+        margin-top: 0;
+    }
+}
+
+.projectN1:hover{
+    opacity:0.7;
+    animation-name:showNumber1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reverseNumber1{
+    from{opacity:0.7;
+        margin-top: 0;
+    }
+    to{opacity: 0;
         margin-top: -100px;
     }
 }
-.over{
+
+/*project 1 hover number*/
+
+.tecnologies1{
+    background-color: blue;
+    width: 150px;
+    height: 350px;
+    right: 0;
+    top:60px;
+    opacity: 0;
+    position: absolute;
+    animation-name:reverseTecnologies1;
+    animation-duration: 0.5s;
+}
+
+.project1:hover ~ .tecnologies1{
+    animation-name:showtecnologies1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showtecnologies1{
+    from{opacity: 0;
+        margin-top: -100px;       
+    }
+    to{opacity: 0.7;
+        margin-top: 0;
+    }
+}
+
+.tecnologies1:hover{
+    opacity:0.7;
+    animation-name:showtecnologies1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reverseTecnologies1{
+    from{opacity:0.7;
+        margin-top: 0;
+    }
+    to{opacity: 0;
+        margin-top: -100px;
+    }
+}
+
+/*project 1 hover code*/
+
+.seeAppAndCode{
     width:400px;
     height: 100px;
     background-color: blue;
     position: absolute;
     margin-top: 0;
     opacity: 0;
-    animation-name:toReverse;
+    animation-name:reverseApp1;
     animation-duration: 0.5s;
 }
+.seeAppAndCode input{opacity: 1.5;}
 
-.over:hover{opacity:1;
-    animation-name:on;
+.project1:hover ~ .seeAppAndCode{
+    animation-name:showApp1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-@keyframes toReverse{
-    from{opacity:1;
+@keyframes showApp1{
+    from{opacity: 0;
+        margin-top: 0;       
+    }
+    to{opacity: 0.7;
+        margin-top: -100px;
+    }
+}
+
+.seeAppAndCode:hover{
+    opacity:0.7;
+    animation-name:showApp1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reverseApp1{
+    from{opacity:0.7;
         margin-top: -100px;
     }
     to{opacity: 0;
@@ -125,37 +316,9 @@ body{
 }
 
 
-.square{
-    position:absolute;
-    width: 50%;
-    height: 100%;
-    background-color: yellow;
-}
 
-.square h1, .square p{
-    width: 100%;
-    background-color: aqua;
-    text-align: center;
-    width: 70%;
-    margin: 140px 10% -120px 20%;
-    font-size: 150%;
-    animation-name: appear-text;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-}
 
-@keyframes appear-text{
-    from{opacity: 0;
-        margin: 0;
-    
-    }
-    to{opacity: 1;
-        margin: 140px 10% -120px 20%;
-    }
-}
-
+/*about and contact*/
 
 .about, .contact{
     background-color: violet;
@@ -167,25 +330,4 @@ body{
 
 .about h2,.about p,.contact h2,.contact p{
     margin: 0 70px;
-}
-
-.name{
-    margin-left:5%;
-    font-size: 170%;
-    width:200px;
-    float:left;
-    margin-top: 1.2%;
-}
-
-ul{
-    list-style-type:none;
-    display:flex;
-    flex-direction: row;
-    margin-right: 0%;
-    margin-left: 59%;
-}
-
-li{
-    font-size:150%;
-    margin: 0.1% 10% 0 0;
 }
