@@ -147,7 +147,7 @@ a:active{
 
 /*project 1*/
 
-#projectId1{
+#projectId1,#projectId2,#projectId3{
     width:100%;
     margin:1%;
     display: flex;
@@ -202,10 +202,10 @@ a:active{
 
 @keyframes showNumber1{
     from{opacity: 0;
-        margin-top: -100px;       
+        margin-left: -100px;       
     }
     to{opacity: 0.7;
-        margin-top: 0;
+        margin-left: 0;
     }
 }
 
@@ -218,10 +218,10 @@ a:active{
 
 @keyframes reverseNumber1{
     from{opacity:0.7;
-        margin-top: 0;
+        margin-left: 0;
     }
     to{opacity: 0;
-        margin-top: -100px;
+        margin-left: -100px;
     }
 }
 
@@ -316,6 +316,16 @@ a:active{
 }
 
 
+/*project 2
+
+#projectId2{
+    width:100%;
+    margin:1%;
+    display: flex;
+    margin-top: 20%;
+    border-radius: 20px;
+    opacity: 1;}
+*/
 
 
 /*about and contact*/
