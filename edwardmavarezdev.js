@@ -21,7 +21,7 @@ function projectObserve1(entries,data){
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0.9) {
       entry.target.classList.add('in-viewport');
-      project1.className = "project1"
+      project1.className = "projectAppear"
     } else {
       entry.target.classList.remove('in-viewport');
      
@@ -31,37 +31,37 @@ function projectObserve1(entries,data){
 observer1.observe(project1);
 
 
-//observer priject 2
+// //observer priject 2
 
-let observer2 = new IntersectionObserver(projectObserve2, options);
+// let observer2 = new IntersectionObserver(projectObserve2, options);
 
-function projectObserve2(entries,data){
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0.9) {
-      entry.target.classList.add('in-viewport');
-      project2.className = "project1"
-    } else {
-      entry.target.classList.remove('in-viewport');
+// function projectObserve2(entries,data){
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > 0.9) {
+//       entry.target.classList.add('in-viewport');
+//       project2.className = "projectAppear"
+//     } else {
+//       entry.target.classList.remove('in-viewport');
      
-    }
-  });
-}
-observer2.observe(project2);
+//     }
+//   });
+// }
+// observer2.observe(project2);
 
 
-//observer priject 3
+// //observer priject 3
 
-let observer3 = new IntersectionObserver(projectObserve3, options);
+// let observer3 = new IntersectionObserver(projectObserve3, options);
 
-function projectObserve3(entries,data){
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0.9) {
-      entry.target.classList.add('in-viewport');
-      project3.className = "project1"
-    } else {
-      entry.target.classList.remove('in-viewport');
+// function projectObserve3(entries,data){
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > 0.9) {
+//       entry.target.classList.add('in-viewport');
+//       project3.className = "projectAppear"
+//     } else {
+//       entry.target.classList.remove('in-viewport');
      
-    }
-  });
-}
-observer3.observe(project3);
+//     }
+//   });
+// }
+// observer3.observe(project3);

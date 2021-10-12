@@ -145,7 +145,7 @@ a:active{
     position:relative;
 }
 
-/*project 1*/
+/*project List*/
 
 #projectId1,#projectId2,#projectId3{
     width:100%;
@@ -155,9 +155,10 @@ a:active{
     border-radius: 20px;
     opacity: 0;}
 
+
 /*project animation*/
 
-.project1{
+.projectAppear{
     width:100%;
     margin:1%;
     display: flex;
@@ -177,9 +178,10 @@ a:active{
         margin-left:1%;}
 }
 
+
 /*project 1 hover number*/
 
-.projectN1{
+.projectN{
     background-color: blue;
     width: 100px;
     height: 100px;
@@ -194,7 +196,16 @@ a:active{
     animation-duration: 0.5s;
 }
 
-.project1:hover ~ .projectN1{
+@keyframes reverseNumber1{
+    from{opacity:0.7;
+        margin-left: 0;
+    }
+    to{opacity: 0;
+        margin-left: -100px;
+    }
+}
+
+.projectAppear:hover ~ .projectN, .projectN:hover{
     animation-name:showNumber1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -209,26 +220,11 @@ a:active{
     }
 }
 
-.projectN1:hover{
-    opacity:0.7;
-    animation-name:showNumber1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
 
-@keyframes reverseNumber1{
-    from{opacity:0.7;
-        margin-left: 0;
-    }
-    to{opacity: 0;
-        margin-left: -100px;
-    }
-}
-
-/*project 1 hover number*/
+/*project 1 hover tecnologies*/
 
 .tecnologies1{
-    background-color: blue;
+    background-color:rgba(0, 0, 255,.5);
     width: 150px;
     height: 350px;
     right: 0;
@@ -237,9 +233,19 @@ a:active{
     position: absolute;
     animation-name:reverseTecnologies1;
     animation-duration: 0.5s;
+    border-radius: 10%;
 }
 
-.project1:hover ~ .tecnologies1{
+@keyframes reverseTecnologies1{
+    from{opacity:1;
+        margin-top: 0;
+    }
+    to{opacity: 0;
+        margin-top: -100px;
+    }
+}
+
+.projectAppear:hover ~ .tecnologies1, .tecnologies1:hover{
     animation-name:showtecnologies1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -249,65 +255,38 @@ a:active{
     from{opacity: 0;
         margin-top: -100px;       
     }
-    to{opacity: 0.7;
+    to{opacity: 1;
         margin-top: 0;
     }
 }
 
-.tecnologies1:hover{
-    opacity:0.7;
-    animation-name:showtecnologies1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+/*Tecnologies Buttons*/
+
+.htmlButton, .cssButton, .javascriptButton{
+    display: block;
+    margin: auto;
+    margin-top: 30%;
+    background-color: salmon;
 }
 
-@keyframes reverseTecnologies1{
-    from{opacity:0.7;
-        margin-top: 0;
-    }
-    to{opacity: 0;
-        margin-top: -100px;
-    }
-}
 
-/*project 1 hover code*/
 
-.seeAppAndCode{
+/*projects hover code*/
+
+.seeProjectAndCode{
     width:400px;
     height: 100px;
-    background-color: blue;
+    background-color:rgba(0, 0, 255,.5);
     position: absolute;
     margin-top: 0;
     opacity: 0;
-    animation-name:reverseApp1;
+    animation-name:reverseApp;
     animation-duration: 0.5s;
-}
-.seeAppAndCode input{opacity: 1.5;}
-
-.project1:hover ~ .seeAppAndCode{
-    animation-name:showApp1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    border-radius: 5%;
 }
 
-@keyframes showApp1{
-    from{opacity: 0;
-        margin-top: 0;       
-    }
-    to{opacity: 0.7;
-        margin-top: -100px;
-    }
-}
-
-.seeAppAndCode:hover{
-    opacity:0.7;
-    animation-name:showApp1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes reverseApp1{
-    from{opacity:0.7;
+@keyframes reverseApp{
+    from{opacity:1;
         margin-top: -100px;
     }
     to{opacity: 0;
@@ -315,21 +294,37 @@ a:active{
     }
 }
 
+.seeProjectAndCode:hover, .projectAppear:hover ~ .seeProjectAndCode{
+    opacity:1;
+    animation-name:showCode;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
 
-/*project 2
+@keyframes showCode{
+    from{opacity: 0;
+        margin-top: 0;       
+    }
+    to{opacity: 1;
+        margin-top: -100px;
+    }
+}
 
-#projectId2{
-    width:100%;
-    margin:1%;
-    display: flex;
-    margin-top: 20%;
-    border-radius: 20px;
-    opacity: 1;}
-*/
+/*Project and Code buttons*/
 
+.seeProject, .seeCode{
+    opacity: 1;
+    z-index: 1;
+    top: 40%;
+    animation-duration: 0.5s;
+    background-color: rgb(0, 255, 34);
+    width: 100px;
+    height: 20px;
+    margin: 10%;
+    display: inline-block;
+}
 
-/*about and contact*/
-
+/*about*/
 .about, .contact{
     background-color: violet;
     width: 65%;
