@@ -1,3 +1,4 @@
+
 html,body{
     width:100%;
     height:100%;
@@ -110,7 +111,7 @@ a:active{
     width: 40%;
     border-radius: 100%;
     border: solid white 3px;
-    opacity:  1;
+    opacity: 1;
     animation-name: appear;
     animation-duration: 1.0s;
     animation-delay: 0.5s;
@@ -181,7 +182,7 @@ a:active{
 /*project 1 hover number*/
 
 .projectN{
-    background-color: blue;
+    background-color: rgb(230, 230, 230);
     width: 15%;
     height: 22%;
     border-radius: 50px;
@@ -224,7 +225,7 @@ a:active{
 /*project 1 hover tecnologies*/
 
 .tecnologies{
-    background-color:rgba(0, 0, 255,.5);
+    background-color:rgba(230, 230, 230,0.7);
     width: 23%;
     height: 79%;
     right: -2.5%;
@@ -233,7 +234,10 @@ a:active{
     position: absolute;
     animation-name:reverseTecnologies;
     animation-duration: 0.5s;
-    border-radius: 12px
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 @keyframes reverseTecnologies{
@@ -263,27 +267,41 @@ a:active{
 /*Tecnologies Buttons*/
 
 .htmlButton, .cssButton, .javascriptButton{
-    display: block;
-    margin: auto;
-    margin-top: 30%;
-    background-color: salmon;
+    width: 70%;
+    height: 30%;
+    align-self: center;
+    background:url(html-css-js-logo.png);
+    background-size: 260%;
 }
 
+.htmlButton{
+    background-position: 0 -7px;
+}
 
+.cssButton{
+    background-position: 100% -7px;
+}
+
+.javascriptButton{
+    background-position: 50% -7px;
+}
 
 /*projects hover code*/
 
 .seeProjectAndCode{
     width:75%;
     height: 25%;
-    background-color:rgba(0, 0, 255,.5);
+    background-color:rgba(230, 230, 230, 0.7);
     position: absolute;
     margin-top: -16%;
     margin-left: -0.5%;
     opacity: 0;
     animation-name:reverseApp;
     animation-duration: 0.5s;
-    border-radius: 12px;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 @keyframes reverseApp{
@@ -316,13 +334,24 @@ a:active{
 .seeProject, .seeCode{
     opacity: 1;
     z-index: 1;
-    top: 40%;
     animation-duration: 0.5s;
-    background-color: rgb(0, 255, 34);
-    width: 80px;
-    height: 20px;
-    margin: 10%;
-    display: inline-block;
+    background-color: rgb(102, 31, 168);
+    color:rgb(230, 230, 230);
+    width: 40%;
+    opacity: 0.9;
+    border: none;
+    height: 32%;
+    align-self: center;
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+}
+/* color testing for buttons */
+.seeProject:hover, .seeCode:hover{
+    border: solid 3px rgb(0, 0, 0);
+}
+
+.seeProject:active, .seeCode:active{
+    border: solid 2px rgb(197, 25, 25);
 }
 
 /*about*/
