@@ -62,31 +62,37 @@ a:active{
 /*first content*/
 
 
-.square{
+.presentationContainer{
     position:absolute;
     width: 50%;
     height: 100%;
     background-color: rgb(230, 230, 230);
 }
 
-.square h1,.square h2, .square p{
-    
-    width: 60%;
+#presentation{
+    width: 61%;
     margin: 180px 10% -179px 40%;
+    opacity: 0;
+}
+
+.presentationAppear{
     animation-name: appear-text;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;}
+
+.presentationContainer h1,.presentationContainer h2, .presentationContainer p{
+    display: inline;
 }
 
 .shine{color:rgb(54, 1, 83)}
 
-.square h1{font-size: 3vw;}
+.presentationContainer h1{font-size: 3vw;}
 
-.square h2{font-size: 4.5vw;}
+.presentationContainer h2{font-size: 4.5vw;}
 
-.square p{font-size: 3vw;}
+.presentationContainer p{font-size: 3vw;}
 
 @keyframes appear-text{
     from{opacity: 0;
@@ -98,26 +104,39 @@ a:active{
     }
 }
 
-.picture{
+.pictureContainer{
     background-color: rgb(102, 31, 168);
     width: 70%;
     height: 100%;
     float: right;
 }
-.picture img{
+#personalPicture,.personalPictureAppear{
     float: right;
     margin:20%;
     margin-top: 140px;
     width: 40%;
     border-radius: 100%;
     border: solid white 3px;
-    opacity: 1;
+    opacity: 0;
+    transition: 1000ms;
+}
+.personalPictureAppear{
     animation-name: appear;
     animation-duration: 1.0s;
-    animation-delay: 0.5s;
+    animation-delay:0.7;
     animation-timing-function:ease-in-out;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
+
 }
+
+/* #personalPicture:hover{
+    width: 41.5%;
+    margin-right:19%;
+    margin-top: 0px;
+    transition: 1000ms;
+    border: solid red 3px;
+} */
+
 @keyframes appear{    
     from{opacity: 0;
         margin:0%;

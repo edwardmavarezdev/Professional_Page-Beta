@@ -1,4 +1,3 @@
-
 //project selector
 
 const project1 = document.querySelector('#projectId1')
@@ -12,6 +11,29 @@ const options = {
     rootMargin: '0px',
     threshold: 1
   }
+
+// observer presentation
+
+const presentationPicture = document.querySelector('#personalPicture')
+const textPresent = document.querySelector('#presentation')
+
+let observePresentation = new IntersectionObserver(observerEntry, options)
+
+function observerEntry(entries,data){
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0.9) {
+      entry.target.classList.add('in-viewport');
+      presentationPicture.className = "personalPictureAppear"
+      textPresent.className = "presentationAppear"
+
+    } else {
+      entry.target.classList.remove('in-viewport');
+     
+    }
+  });
+}
+
+observePresentation.observe(presentation);
 
 //observer project 1
 
