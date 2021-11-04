@@ -23,9 +23,10 @@ function observerEntry(entries,data){
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0.9) {
       entry.target.classList.add('in-viewport');
-      presentationPicture.className = "personalPictureAppear"
+      presentationPicture.id = "personalPictureAppear"
       textPresent.className = "presentationAppear"
-
+      setTimeout(() => { presentationPicture.id = "personalPictureAppearHover" }, 1100);
+      
     } else {
       entry.target.classList.remove('in-viewport');
      
@@ -87,3 +88,8 @@ function projectObserve3(entries,data){
   });
 }
 observer3.observe(project3);
+
+
+console.log("Hello");
+setTimeout(() => { console.log("World!"); }, 2000);
+console.log("Goodbye!");
