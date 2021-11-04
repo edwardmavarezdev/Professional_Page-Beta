@@ -112,8 +112,8 @@ a:active{
 }
 #personalPicture,.personalPictureAppear{
     float: right;
-    margin:20%;
-    margin-top: 140px;
+    background-color: black;
+    padding:1%;
     width: 40%;
     border-radius: 100%;
     border: solid white 3px;
@@ -126,16 +126,8 @@ a:active{
     animation-delay:0.7;
     animation-timing-function:ease-in-out;
     animation-fill-mode: forwards;
-
 }
 
-/* #personalPicture:hover{
-    width: 41.5%;
-    margin-right:19%;
-    margin-top: 0px;
-    transition: 1000ms;
-    border: solid red 3px;
-} */
 
 @keyframes appear{    
     from{opacity: 0;
