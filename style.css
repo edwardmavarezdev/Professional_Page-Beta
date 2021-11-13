@@ -70,6 +70,7 @@ a:active{
 
 #presentation{
     width: 61%;
+    height: 50%;
     margin: 180px 10% -179px 40%;
     opacity: 0;
 }
@@ -92,6 +93,42 @@ a:active{
 .presentationContainer h2{font-size: 4.5vw;}
 
 .presentationContainer p{font-size: 3vw;}
+
+
+.professional_buttons{
+    height: 6vw;
+    display: flex;
+}
+.github, .email, .linkedin{
+    font-size: 3vw;
+    width:5vw;
+    height: 5vw;
+    display: inline-block;
+    margin: 1%;
+    transition: 0ms;
+    align-self: flex-end;
+}
+
+ .github{
+    background: url(github.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+.email{
+    background: url(email.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+.linkedin{
+    background: url(linkedin.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
 
 @keyframes appear-text{
     from{opacity: 0;
