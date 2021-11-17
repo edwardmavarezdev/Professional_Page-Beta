@@ -382,12 +382,19 @@ a:active{
 /*about*/
 .about, .contact{
     background-color: violet;
-    width: 65%;
+    width: 99%;
     display:flex;
     flex-direction: column;
     border: solid 1px black;
+    margin: auto;
 }
 
 .about h2,.about p,.contact h2,.contact p{
-    margin: 0 70px;
+    margin: auto;
+    margin-top: 1%;
+    padding: 2% 20%;
+}
+
+.about h2,.contact h2{
+    font-size: 3vw;
 }
