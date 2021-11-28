@@ -240,17 +240,41 @@ a:active{
         margin-left:1%;}
 }
 
+.description{
+    width:57%;
+    height: 54%;
+    background-color:  rgba(230, 230, 230,0.7);
+    border-radius: 1vw;
+    position: absolute;
+    top:20%;
+    left:21%;
+    opacity: 0;
+    font-size: 2vw;
+}
+
+.projectAppear:hover ~ .description, .description:hover{
+    animation-name: opa;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes opa{
+    from{opacity: 0;
+}
+to{opacity: 1;}
+}
+
 
 /*project 1 hover number*/
 
 .projectN{
     background-color: rgb(230, 230, 230);
-    width: 15%;
-    height: 22%;
+    width: 12%;
+    height: 19%;
     border-radius: 50px;
     text-align: center;
     display: table-cell;
-    font-size: 6vw;
+    font-size: 5vw;
     position: absolute;
     top: 12%;
     left: -1%;
@@ -268,11 +292,11 @@ a:active{
     }
 }
 
-.projectAppear:hover ~ .projectN, .projectN:hover{
+ .projectAppear:hover ~ .projectN, .projectN:hover, .description:hover ~ .projectN{
     animation-name:showNumber1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-}
+} 
 
 @keyframes showNumber1{
     from{opacity: 0;
@@ -288,18 +312,18 @@ a:active{
 
 .tecnologies{
     background-color:rgba(230, 230, 230,0.7);
-    width: 23%;
-    height: 79%;
-    right: -2.5%;
-    top: 12.5%;
+    width: 8%;
+    height: 83.6%;
+    right: -1%;
+    margin-top: 1.6%;
     opacity: 0;
     position: absolute;
     animation-name:reverseTecnologies;
     animation-duration: 0.5s;
-    border-radius: 1vw;
+    border-radius: 0.3vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
 }
 
 @keyframes reverseTecnologies{
@@ -311,7 +335,7 @@ a:active{
     }
 }
 
-.projectAppear:hover ~ .tecnologies, .tecnologies:hover{
+.projectAppear:hover ~ .tecnologies, .tecnologies:hover, .description:hover ~ .tecnologies{
     animation-name:showTecnologies;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -351,16 +375,16 @@ a:active{
 /*projects hover code*/
 
 .seeProjectAndCode{
-    width:75%;
-    height: 25%;
+    width: 91.5%;
+    height: 15%;
     background-color:rgba(230, 230, 230, 0.7);
     position: absolute;
-    margin-top: -16%;
-    margin-left: -0.5%;
+    left: 1%;
+    bottom:1.6%;
     opacity: 0;
     animation-name:reverseApp;
     animation-duration: 0.5s;
-    border-radius: 1vw;
+    border-radius: 0.3vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -368,15 +392,14 @@ a:active{
 
 @keyframes reverseApp{
     from{opacity:1;
-        margin-top: -16%;
+        bottom:1.6%;
     }
     to{opacity: 0;
-        margin-top: 10%;
+        bottom: -20%;
     }
 }
 
-.seeProjectAndCode:hover, .projectAppear:hover ~ .seeProjectAndCode{
-    opacity:1;
+.seeProjectAndCode:hover, .projectAppear:hover ~ .seeProjectAndCode, .description:hover ~ .seeProjectAndCode{
     animation-name:showCode;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -384,10 +407,10 @@ a:active{
 
 @keyframes showCode{
     from{opacity: 0;
-        margin-top: 10%;       
+        bottom: -20%;       
     }
     to{opacity: 1;
-        margin-top: -16%;
+        bottom: 1.6%;
     }
 }
 
@@ -402,7 +425,7 @@ a:active{
     width: 40%;
     opacity: 0.9;
     border: none;
-    height: 32%;
+    height: 50%;
     align-self: center;
     font-size: 1.5vw;
     border-radius: 0.5vw;
