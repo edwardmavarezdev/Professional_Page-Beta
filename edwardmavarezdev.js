@@ -29,7 +29,7 @@ function observerEntry(entries,data){
       
     } else {
       entry.target.classList.remove('in-viewport');
-     
+	     
     }
   });
 }
