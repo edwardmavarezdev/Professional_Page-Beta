@@ -93,3 +93,47 @@ observer3.observe(project3);
 console.log("Hello");
 setTimeout(() => { console.log("World!"); }, 2000);
 console.log("Goodbye!");
+
+
+//observe aboutLetters
+
+const aboutLetters = document.querySelector(".aboutLetters")
+
+let observerAboutLetters = new IntersectionObserver(projectObserveAboutLetters, options);
+
+function projectObserveAboutLetters(entries,data){
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0.9) {
+      entry.target.classList.add('in-viewport');
+      aboutLetters.className = "aboutLettersAppear"
+    } else {
+      entry.target.classList.remove('in-viewport');
+     
+    }
+  });
+}
+
+observerAboutLetters.observe(aboutLetters)
+
+
+//observe aboutDescription
+
+let aboutDescription = document.querySelector("#aboutDescription")
+
+let observerAboutDescription = new IntersectionObserver(projectObserveAboutDescription, options);
+
+function projectObserveAboutDescription(entries,data){
+  entries.forEach(entry => {
+	  
+    if (entry.intersectionRatio > 0.9) {
+      entry.target.classList.add('in-viewport');
+      aboutDescription.className = "aboutDescriptionAppear";
+      aboutDescription.id = "aboutDescriptionAppear";
+    } else {
+      entry.target.classList.remove('in-viewport');
+     
+    }
+  });
+}
+
+observerAboutDescription.observe(aboutDescription)
