@@ -108,7 +108,7 @@ a:active{
 
 
 .professional_buttons{
-	height: 5vw;
+	height: 5.5vw;
 	display: flex;
 }
 .github, .email, .linkedin{
@@ -116,7 +116,7 @@ a:active{
 	width:5vw;
 	height: 5vw;
 	display: inline-block;
-	margin: 1%;
+	margin: 0 2%;
 	transition: 0ms;
 	align-self: flex-end;
 }
@@ -238,32 +238,68 @@ a:active{
 	margin-left:1%;}
 }
 
+
+.descriptionHide{
+	width:100%;
+	height:5.4vw;
+	background-color:transparent;
+	position: absolute;
+	z-index:2;
+	top:-0.5vw;
+	left:0.5vw;
+}
+
 .description{
 	width:57%;
 	height: 54%;
 	background-color:  rgba(230, 230, 230,0.7);
 	border-radius: 1vw;
 	position: absolute;
-	top:20%;
+	top:-1%;
 	left:21%;
 	opacity: 0;
 	font-size: 2vw;
+	animation-name:descriptionReverse;
+	animation-duration:0.5s;
+}
+
+@keyframes descriptionReverse{
+	from{opacity:1;
+		top:20%;
+	}
+	to{opacity:0
+		top:-1%;
+	}
 }
 
 .projectAppear:hover ~ .description, .description:hover{
-	animation-name: opa;
+	animation-name: descriptionShow;
 	animation-fill-mode: forwards;
 	animation-duration: 0.5s;
 }
 
-@keyframes opa{
+@keyframes descriptionShow{
 	from{opacity: 0;
+		top: -1%
 	}
-	to{opacity: 1;}
+	to{opacity: 1;
+		top: 20%;
+	}
 }
 
 
-/*project 1 hover number*/
+/*project hover number*/
+
+
+.projectNHide{
+	width:10vw;
+	height:7vw;
+	background-color:transparent;
+	position: absolute;
+	z-index:2;
+	top:3.5vw;
+	left:-9.6vw;
+}
 
 .projectN{
 	background-color: rgb(230, 230, 230);
@@ -275,7 +311,7 @@ a:active{
 	font-size: 5vw;
 	position: absolute;
 	top: 12%;
-	left: -1%;
+	left: -6vw;
 	opacity: 0;
 	animation-name:reverseNumber;
 	animation-duration: 0.5s;
@@ -283,10 +319,10 @@ a:active{
 
 @keyframes reverseNumber{
 	from{opacity:0.7;
-		margin-left: 0;
+		left: -0.5vw;
 	}
 	to{opacity: 0;
-		margin-left: -25%;
+		left: -6vw;
 	}
 }
 
@@ -298,15 +334,25 @@ a:active{
 
 @keyframes showNumber1{
 	from{opacity: 0;
-		margin-left: -25%;       
+		left: -6vw;
 	}
 	to{opacity: 0.7;
-		margin-left: 0;
+		left:-0.5vw;
 	}
 }
 
 
 /*project 1 hover tecnologies*/
+
+.tecnologiesHide{
+	width:6.5vw;
+	height:17.5vw;
+	background-color:transparent;
+	position: absolute;
+	z-index:2;
+	top:4.9vw;
+	left:49.6vw;
+}
 
 .tecnologies{
 	background-color:rgba(230, 230, 230,0.7);
@@ -322,15 +368,17 @@ a:active{
 	border-radius: 0.3vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly; 
+	justify-content: space-evenly;
+        right: -6.7vw;
+	top:4.1vw;
 }
 
 @keyframes reverseTecnologies{
 	from{opacity:1;
-		top: 12.5%;
+	right:-0.5vw;
 	}
 	to{opacity: 0;
-		top: -20%;
+	right:-6.7vw;
 	}
 }
 
@@ -342,10 +390,10 @@ a:active{
 
 @keyframes showTecnologies{
 	from{opacity: 0;
-		top: -20%;
+	right: -6.7vw;
 	}
 	to{opacity: 1;
-		top: 12.5%;
+	right: -0.5vw;
 	}
 }
 
@@ -373,13 +421,23 @@ a:active{
 
 /*projects hover code*/
 
+.seeProjectAndCodeHide{
+	width:100%;
+	height:5.4vw;
+	background-color:transparent;
+	position: absolute;
+	z-index:2;
+	top:32.5vw;
+	left:0.5vw;
+}
+
 .seeProjectAndCode{
 	width: 91.5%;
 	height: 15%;
 	background-color:rgba(230, 230, 230, 0.7);
 	position: absolute;
-	left: 1%;
-	bottom:1.6%;
+	left:0.5vw;
+	bottom:-4.9vw;
 	opacity: 0;
 	animation-name:reverseApp;
 	animation-duration: 0.5s;
@@ -391,10 +449,10 @@ a:active{
 
 @keyframes reverseApp{
 	from{opacity:1;
-		bottom:1.6%;
+		bottom:0.5vw;
 	}
 	to{opacity: 0;
-		bottom: -20%;
+		bottom:-4.9vw;
 	}
 }
 
@@ -406,10 +464,11 @@ a:active{
 
 @keyframes showCode{
 	from{opacity: 0;
-		bottom: -20%;       
+		bottom:-4.9vw;
+       
 	}
 	to{opacity: 1;
-		bottom: 1.6%;
+		bottom:0.5vw;
 	}
 }
 
