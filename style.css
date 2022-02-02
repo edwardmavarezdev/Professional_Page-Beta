@@ -549,17 +549,17 @@ a:active{
 }
 
 .boxup1, .boxup2{
-	border-right: solid transparent 1vw;
-	border-top: solid rgb(102, 31, 168) 5vw;
+	top:-0.5vw;
 }
 
 .boxup2{
-	width: 78vw;
+	width: 75.5vw;
 	left: -14vw;
+	border-top: solid rgb(102, 31, 168) 6vw;
 }
 
 #boxup2Reveal{
-	width: 78vw;
+	width: 75.5vw;
 	left: -14vw;
 	animation-name:revealAbout;
 	animation-duration:1.5s;
@@ -570,33 +570,37 @@ a:active{
 
 @keyframes revealAbout{
 	from{
-	width:78vw
+	width:75.5vw;
+	border-right: solid transparent 0vw;
 	}
 	to{
-	width:14vw
+	width:14vw;
+	border-right: solid transparent 1vw;
 	}
 }
 
 .boxup1{
-	border-top: solid white 5vw;
+	border-top: solid white 6vw;
 	left:-12vw;
 	width: 13vw;
+	border-right: solid transparent 1vw;
 }
 
 .boxup3, .boxup4{
-	border-top: solid rgb(102, 31, 168) 25vw;
-	border-right: solid transparent 4vw;
-	top:9vw;
+	border-top: solid rgb(102, 31, 168) 26vw;
+	top:8.5vw;
+	border-right:solid transparent 4vw;
 }
 
 .boxup4{
 	left: -1vw;
-	width: 100vw;
+	width: 99.5vw;
+	border-right:solid transparent 0vw;
 }
 
 #boxup4Reveal{
 	left: -1vw;
-	width: 100vw;
+	width: 99.5vw;
 	animation-name:revealAboutDescription;
 	animation-duration:1.5s;
 	animation-fill-mode:forwards;
@@ -607,14 +611,16 @@ a:active{
 @keyframes revealAboutDescription{
 	from{
 	width:100vw;
+	border-right:solid transparent 0vw;
 	}
 	to{
 	width:13vw;
+	border-right:solid transparent 4vw;
 	}
 }
 
 .boxup3{
-	border-top: solid white 25vw;
+	border-top: solid white 26vw;
 	left: 0vw;
 	width: 13vw;
 }
@@ -635,7 +641,7 @@ a:active{
 	width:60vw;
 	padding:0vw;
 	opacity:0;
-	font-size:1.6vw;
+	font-size:1.45vw;
 }
 
 
