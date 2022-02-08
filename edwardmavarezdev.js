@@ -36,6 +36,18 @@ function observerEntry(entries,data){
 
 observePresentation.observe(presentation);
 
+//switch hover elements with observer
+
+
+function switchHover(number,onOff){
+
+	let onLoad = document.querySelectorAll('#onLoad'+number);
+
+	for(i=0;i<4;i++){onLoad[i].style=("z-index:"+onOff)}
+}
+
+for(l=1;l<4;l++){switchHover(l,-1)}
+
 //observer project 1
 
 let observer1 = new IntersectionObserver(projectObserve1, options);
@@ -45,6 +57,8 @@ function projectObserve1(entries,data){
     if (entry.intersectionRatio > 0.9) {
       entry.target.classList.add('in-viewport');
       project1.className = "projectAppear"
+	setTimeout(() => { switchHover(1,0) }, 550);
+
     } else {
       entry.target.classList.remove('in-viewport');
      
@@ -62,7 +76,9 @@ function projectObserve2(entries,data){
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0.9) {
       entry.target.classList.add('in-viewport');
-      project2.className = "projectAppear"
+      project2.className = "projectAppear";
+	setTimeout(() => { switchHover(2,0) }, 550);
+
     } else {
       entry.target.classList.remove('in-viewport');
      
@@ -72,7 +88,7 @@ function projectObserve2(entries,data){
 observer2.observe(project2);
 
 
-//observer priject 3
+//observer project 3
 
 let observer3 = new IntersectionObserver(projectObserve3, options);
 
@@ -80,7 +96,8 @@ function projectObserve3(entries,data){
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0.9) {
       entry.target.classList.add('in-viewport');
-      project3.className = "projectAppear"
+      project3.className = "projectAppear";
+	setTimeout(() => { switchHover(3,0) }, 550);
     } else {
       entry.target.classList.remove('in-viewport');
      
