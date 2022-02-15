@@ -8,8 +8,8 @@ const project3 = document.querySelector('#projectId3')
 
 const options = {
     //root:,
-    rootMargin: '0px',
-    threshold: 1
+    rootMargin: '-1px',
+    threshold: 0.9
   }
 
 // observer presentation
@@ -114,19 +114,26 @@ console.log("Goodbye!");
 
 //observe aboutLetters
 
-const aboutLetters = document.querySelector("#aboutLetters");
+const optionsAbout = {
+    //root:,
+    rootMargin: '0px',
+    threshold: 0.3
+  }
+
+const aboutBackground = document.querySelector(".about-background");
+let aboutLetters = document.querySelector("#aboutLetters");
 let boxup2 = document.querySelector(".boxup2");
 
-let observerAboutLetters = new IntersectionObserver(projectObserveAboutLetters, options);
+let observerAboutLetters = new IntersectionObserver(projectObserveAboutLetters, optionsAbout);
 
 function projectObserveAboutLetters(entries,data){
   entries.forEach(entry => {
-    if (entry.intersectionRatio > 0.9) {
+    if (entry.intersectionRatio > 0.3) {
 	entry.target.classList.add('in-viewport');
 	aboutLetters.id = "aboutLettersAppear";
 	aboutLetters.className = "aboutLettersAppear";
 	boxup2.id = "boxup2Reveal";
-   
+	    console.log(entry.intersetionRatio)
     } else {
       entry.target.classList.remove('in-viewport');
      
@@ -134,9 +141,9 @@ function projectObserveAboutLetters(entries,data){
   });
 }
 
-observerAboutLetters.observe(aboutLetters)
+observerAboutLetters.observe(aboutBackground)
 
-
+/*
 //observe aboutDescription
 
 let aboutDescription = document.querySelector("#aboutDescription")
@@ -159,4 +166,6 @@ function projectObserveAboutDescription(entries,data){
   });
 }
 
-observerAboutDescription.observe(aboutDescription)
+//observerAboutDescription.observe(aboutDescription)
+*/
+

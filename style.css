@@ -8,7 +8,7 @@ html,body{
 }
 body{
 	position:relative;
-font-family: helvetica;
+	font-family: "Baloo Tamma 2", Helvetica, sans-serif;	
 }
 
 /*navigation bar*/
@@ -17,7 +17,7 @@ font-family: helvetica;
 	position: fixed;
 	background-color: rgb(230,230,230);
 	width: 100%;
-	height: 7vw;
+	height: 6vw;
 	z-index: 3;
 	opacity: 0.8;
 	top:0px;
@@ -26,13 +26,15 @@ font-family: helvetica;
 
 .name{
 	margin-left:5%;
-	font-size: 4.5vw;
-	width:40%;
+	font-size: 2.5vw;
+	width:37%;
 	float:left;
-	margin-top: 0.7%;
+	margin-top: 1.6%;
 	color:rgb(54, 1, 83);
 	transition: 100ms;
 	text-decoration: none;
+	letter-spacing:.5vw;
+	text-transform:uppercase;
 }
 
 ul{
@@ -41,18 +43,20 @@ ul{
 	flex-direction: row;
 	margin-top:0;
 	margin-right: 0%;
-	margin-left: 57%;
-	height:7vw;
+	margin-left: 54%;
+	height:5vw;
 }
 
 ul a{
-	font-size:2.5vw;
-	margin: 4.5% 23% 0 -10%;
+	font-size:1.5vw;
+	margin: 5.4% 17% -1% -10%;
 	color: rgb(54, 1, 83);
 	text-decoration: none;
 	border-bottom: transparent solid 0px;
 	transition: 100ms;
 	height:45%;
+	letter-spacing:.5vw;
+	text-transform:uppercase;
 }
 
 a:hover{
@@ -98,15 +102,14 @@ a:active{
 	}
 }
 
-.presentationContainer h1,.presentationContainer h2, .presentationContainer p{
+.presentationContainer .hello,.presentationContainer .helloTittle, .presentationContainer p{
 	display: inline;
 }
 
 .shine{color:rgb(54, 1, 83)}
 
-.presentationContainer h1{font-size: 3vw;}
-
-.presentationContainer h2{font-size:4.5vw;}
+.presentationContainer .hello{font-size: 3.5vw;}
+.presentationContainer .helloTittle{font-size:4.6vw;}
 
 .presentationContainer p{font-size: 3vw;}
 
@@ -319,7 +322,6 @@ a:active{
 	height: 19%;
 	border-radius: 50px;
 	text-align: center;
-	display: table-cell;
 	font-size: 5vw;
 	position: absolute;
 	top: 12%;
@@ -327,6 +329,8 @@ a:active{
 	opacity: 0;
 	animation-name:reverseNumber;
 	animation-duration: 0.5s;
+	vertical-align:middle;
+	display:inline-box;
 }
 
 
@@ -519,27 +523,29 @@ a:active{
 	height:40vw;
 	display:flex;
 	flex-direction: column;
-	margin: auto;
 	position:relative;
 	padding-top:10vw;
+	margin:auto;
 }
 
-.aboutTittle{
+
+.about-background{
 	background-color:rgb(230, 230, 230);
-	margin: 0 auto;
-	width:62.8vw;
-	height:5vw;
+	width:100%;
+	height:33vw;
 	position:absolute;
 	position:relative;
 	margin-top:0vw;
-	left:18vw;
+}
+
+#aboutLettersAppear h2, #aboutLettersAppear p, #aboutLetters h2, #aboutLetters p{
+	width:50vw;
 }
 
 #aboutLetters, #aboutLettersAppear{
-	top:-0.5vw;
 	display:inline-block;
 	position:absolute;
-	left:-12vw;
+	left:-32vw;
 	font-size:2vw;
 }
 
@@ -552,8 +558,8 @@ a:active{
 }
 
 @keyframes getTittle{
-	from{left:-12vw}
-	to{left:11vw}
+	from{left:-32vw}
+	to{left:29vw}
 }
 
 .boxup1, .boxup2, .boxup3, .boxup4{
@@ -563,18 +569,21 @@ a:active{
 }
 
 .boxup1, .boxup2{
-	top:-0.5vw;
+	top:-.7vw;
+}
+
+.boxup1{
+	border-top: solid white 35vw;
+	width: 22vw;
+	border-right: solid transparent 1vw;
 }
 
 .boxup2{
-	width: 76.8vw;
-	left: -14vw;
-	border-top: solid rgb(102, 31, 168) 6vw;
+	width: 100%;
+	border-top: solid rgb(102, 31, 168) 35vw;
 }
 
 #boxup2Reveal{
-	width: 76.8vw;
-	left: -14vw;
 	animation-name:revealAbout;
 	animation-duration:1.5s;
 	animation-fill-mode:forwards;
@@ -584,21 +593,16 @@ a:active{
 
 @keyframes revealAbout{
 	from{
-	width:76.5vw;
+	width:100%;
 	border-right: solid transparent 0vw;
 	}
 	to{
-	width:14vw;
+	width:21vw;
 	border-right: solid transparent 1vw;
 	}
 }
 
-.boxup1{
-	border-top: solid white 6vw;
-	left:-12vw;
-	width: 13vw;
-	border-right: solid transparent 1vw;
-}
+
 
 .boxup3, .boxup4{
 	border-top: solid rgb(102, 31, 168) 26vw;
@@ -648,12 +652,13 @@ a:active{
 	width: 85.8vw;
 	top:20vw;
 	left:13vw;
+	border:solid red 3px;
 }
 
 #aboutDescription, #aboutDescriptionAppear{
 	position:absolute;
 	top:21.4vw;
-	left:20vw;
+	left:13vw;
 	width:60vw;
 	padding:0vw;
 	opacity:0;
