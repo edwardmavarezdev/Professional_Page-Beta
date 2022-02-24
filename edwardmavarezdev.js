@@ -143,29 +143,26 @@ function projectObserveAboutLetters(entries,data){
 
 observerAboutLetters.observe(aboutBackground)
 
-/*
-//observe aboutDescription
+//observe contact
 
-let aboutDescription = document.querySelector("#aboutDescription")
-let boxup4 = document.querySelector(".boxup4")
+const contact_buttons = document.querySelector("#contact-professional_buttons");
 
-let observerAboutDescription = new IntersectionObserver(projectObserveAboutDescription, options);
+let boxH2 = document.querySelector(".boxH2");
+let contact_title = document.querySelector(".contact_title");
 
-function projectObserveAboutDescription(entries,data){
-  entries.forEach(entry => {
-	  
-    if (entry.intersectionRatio > 0.9) {
-	entry.target.classList.add('in-viewport');
-	aboutDescription.className = "aboutDescriptionAppear";
-	aboutDescription.id = "aboutDescriptionAppear";
-	boxup4.id = "boxup4Reveal"
-    } else {
-      entry.target.classList.remove('in-viewport');
-     
-    }
-  });
+let observerContact = new IntersectionObserver(contactObserved,options);
+
+function contactObserved(entries,data){
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0.9) {
+		entry.target.classList.add('in-viewport');
+			boxH2.className="boxH2_observe"
+			contact_title.className="contact_title-observe"
+			contact_buttons.className="contact-professional_buttons--observe";
+		} else {
+		entry.target.classList.remove('inviewport');
+		}
+	});
 }
 
-//observerAboutDescription.observe(aboutDescription)
-*/
-
+observerContact.observe(contact_buttons);
